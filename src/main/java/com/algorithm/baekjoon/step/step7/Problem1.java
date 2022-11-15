@@ -1,5 +1,5 @@
-package com.algorithm.baekjoon.step.step8;
-// 1. 소수 찾기
+package com.algorithm.baekjoon.step.step7;
+// 1. 손익분기점
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -12,28 +12,28 @@ public class Problem1 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int n = Integer.parseInt(br.readLine());
         StringTokenizer st = new StringTokenizer(br.readLine());
+
+        long a = Integer.parseInt(st.nextToken());
+        long b = Integer.parseInt(st.nextToken());
+        long c = Integer.parseInt(st.nextToken());
+
+        long total = a;
+        long breakEventPoint = 0;
         int cnt = 0;
 
-        for (int i = 0; i < n; i++) {
-            int a = Integer.parseInt(st.nextToken());
-
-            if (a != 1) {
-                boolean isPrime = true;
-
-                for (int j = 2; j < a; j++) {
-                    if (a % j == 0) {
-                        isPrime = false;
-                        break;
-                    }
-                }
-
-                if (isPrime == true) {
-                    cnt++;
-                }
+        while(total >= breakEventPoint) {
+            if(cnt > 2100000000) {
+                cnt = -1;
+                break;
             }
+
+            total += b;
+            breakEventPoint += c;
+            cnt++;
         }
+
+        bw.write(total + " " + breakEventPoint + "\n");
 
         bw.write(String.valueOf(cnt));
         bw.flush();

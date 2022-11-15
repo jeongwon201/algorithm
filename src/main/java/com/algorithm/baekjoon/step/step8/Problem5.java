@@ -1,41 +1,40 @@
 package com.algorithm.baekjoon.step.step8;
-// 1. 소수 찾기
+// 5. 베르트랑 공준
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.StringTokenizer;
 
-public class Problem1 {
+import static java.lang.Math.sqrt;
+
+public class Problem5 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int n = Integer.parseInt(br.readLine());
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        int cnt = 0;
+        while (true) {
+            int n = Integer.parseInt(br.readLine());
+            if (n == 0) break;
 
-        for (int i = 0; i < n; i++) {
-            int a = Integer.parseInt(st.nextToken());
+            int cnt = 0;
 
-            if (a != 1) {
+            for (int i = (n + 1); i <= (n * 2); i++) {
                 boolean isPrime = true;
 
-                for (int j = 2; j < a; j++) {
-                    if (a % j == 0) {
+                for (int j = 2; j <= sqrt(i); j++) {
+                    if (i % j == 0) {
                         isPrime = false;
                         break;
                     }
                 }
 
-                if (isPrime == true) {
-                    cnt++;
-                }
+                if(isPrime == true) cnt++;
             }
+
+            bw.write(cnt + "\n");
         }
 
-        bw.write(String.valueOf(cnt));
         bw.flush();
         bw.close();
     }
