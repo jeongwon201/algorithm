@@ -31,6 +31,7 @@ public class CommonMethod {
             bw.write(num + " ");
         }
 
+        bw.write("\n");
         bw.flush();
         bw.close();
     }
