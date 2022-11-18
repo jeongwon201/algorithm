@@ -8,13 +8,13 @@
 ## 정렬 과정
 첫 번째 원소부터 다음 원소와 비교하여 다음 원소보다 크다면 서로 원소를 교환한다. 
 
-![img.png](img.png)
+![img.png](img/img.png)
 
 <br />
 
 버블 정렬은 한 라운드에 하나의 원소가 정렬되기 때문에, 다음 라운드 진행 시 비교 횟수를 하나씩 줄여가면서 반복한다.
 
-![img_1.png](img_1.png)
+![img_1.png](img/img_1.png)
 
 <hr />
 
@@ -26,7 +26,7 @@
 
 <hr />
 
-![img_2.png](img_2.png)
+![img_2.png](img/img_2.png)
 
 <hr />
 
