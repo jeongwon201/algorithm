@@ -1,4 +1,4 @@
-# [자료 구조] 정렬 - Counting Sort
+# Counting Sort, 카운팅 정렬
 
 Counting Sort 란, 배열의 두 값을 서로 비교하지 않고 정렬을 수행하는 정렬 알고리즘이다.
 

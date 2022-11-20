@@ -1,10 +1,10 @@
-package com.algorithm.data_structure.sort.sort4bubble;
+package com.algorithm.sort.bubble;
 
-import com.algorithm.data_structure.sort.common.CommonMethod;
+import com.algorithm.sort.common.CommonMethod;
 
 import java.util.Scanner;
 
-public class Sort_4_BubbleSort {
+public class BubbleSort {
     public static void main(String[] args) throws Exception {
 
         System.out.println("사용할 정렬의 번호를 입력하세요.");

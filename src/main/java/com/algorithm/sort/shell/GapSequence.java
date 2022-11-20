@@ -1,4 +1,4 @@
-package com.algorithm.data_structure.sort.sort5shell;
+package com.algorithm.sort.shell;
 
 public class GapSequence {
     public final static int[] Ciura =

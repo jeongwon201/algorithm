@@ -1,10 +1,10 @@
-package com.algorithm.data_structure.sort.sort5shell;
+package com.algorithm.sort.shell;
 
-import com.algorithm.data_structure.sort.common.CommonMethod;
+import com.algorithm.sort.common.CommonMethod;
 
 import java.util.Scanner;
 
-public class Sort_5_ShellSort {
+public class ShellSort {
     public static void main(String[] args) throws Exception {
 
         System.out.println("사용할 Gap Sequence 번호를 입력하세요.");

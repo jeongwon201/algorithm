@@ -1,8 +1,8 @@
-package com.algorithm.data_structure.sort.sort1countring;
+package com.algorithm.sort.countring;
 
-import com.algorithm.data_structure.sort.common.CommonMethod;
+import com.algorithm.sort.common.CommonMethod;
 
-public class Sort_1_CountingSort {
+public class CountingSort {
     public static void main(String[] args) throws Exception {
 
         int[] nums = CommonMethod.getArray();

@@ -1,8 +1,8 @@
-package com.algorithm.data_structure.sort.sort2selection;
+package com.algorithm.sort.selection;
 
-import com.algorithm.data_structure.sort.common.CommonMethod;
+import com.algorithm.sort.common.CommonMethod;
 
-public class Sort_2_Selection {
+public class SelectionSort {
     public static void main(String[] args) throws Exception {
 
         int[] nums = CommonMethod.getArray();

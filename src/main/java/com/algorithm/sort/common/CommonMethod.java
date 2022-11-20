@@ -1,4 +1,4 @@
-package com.algorithm.data_structure.sort.common;
+package com.algorithm.sort.common;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
