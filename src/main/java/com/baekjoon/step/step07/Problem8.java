@@ -1,34 +1,27 @@
-package com.baekjoon.step.step10;
-// 3. 커트라인
+package com.baekjoon.step.step07;
+// 큰 수 A + B
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Arrays;
+import java.math.BigInteger;
 import java.util.StringTokenizer;
 
-public class Problem3 {
+public class Problem8 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int total = Integer.parseInt(st.nextToken());
-        int cut = Integer.parseInt(st.nextToken());
+        BigInteger a = new BigInteger(st.nextToken());
+        BigInteger b = new BigInteger(st.nextToken());
 
-
-        st = new StringTokenizer(br.readLine());
-
-        int[] x = new int[total];
-        for (int i = 0; i < total; i++) {
-            x[i] = Integer.parseInt(st.nextToken());
-        }
-
-        Arrays.sort(x);
-
-        bw.write(String.valueOf(x[total - cut]));
+        bw.write(String.valueOf(a.add(b)));
         bw.flush();
         bw.close();
     }
 }
+
+// 자바의 BigInteger 클래스를 이용하거나, 배열에 저장하여 계산하는 두 가지 방법이 있다.

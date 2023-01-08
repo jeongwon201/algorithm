@@ -1,33 +1,35 @@
-package com.baekjoon.step.step10;
-// 3. 커트라인
+package com.baekjoon.step.step06;
+// 7. 상수
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Problem3 {
+public class Problem7 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         StringTokenizer st = new StringTokenizer(br.readLine());
+        String a = st.nextToken();
+        String b = st.nextToken();
 
-        int total = Integer.parseInt(st.nextToken());
-        int cut = Integer.parseInt(st.nextToken());
+        String a2 = "";
+        String b2 = "";
 
-
-        st = new StringTokenizer(br.readLine());
-
-        int[] x = new int[total];
-        for (int i = 0; i < total; i++) {
-            x[i] = Integer.parseInt(st.nextToken());
+        for (int i = 2; i >= 0; i--) {
+            a2 += a.charAt(i);
+            b2 += b.charAt(i);
         }
 
-        Arrays.sort(x);
+        if (Integer.parseInt(a2) > Integer.parseInt(b2)) {
+            bw.write(a2);
+        } else {
+            bw.write(b2);
+        }
 
-        bw.write(String.valueOf(x[total - cut]));
         bw.flush();
         bw.close();
     }

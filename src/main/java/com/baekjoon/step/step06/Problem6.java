@@ -1,33 +1,27 @@
-package com.baekjoon.step.step10;
-// 3. 커트라인
+package com.baekjoon.step.step06;
+// 6. 단어의 개수
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Problem3 {
+public class Problem6 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int total = Integer.parseInt(st.nextToken());
-        int cut = Integer.parseInt(st.nextToken());
-
-
-        st = new StringTokenizer(br.readLine());
-
-        int[] x = new int[total];
-        for (int i = 0; i < total; i++) {
-            x[i] = Integer.parseInt(st.nextToken());
+        int cnt = 0;
+        while(st.hasMoreTokens()) {
+            if(st.nextToken() != " ") {
+                cnt++;
+            }
         }
 
-        Arrays.sort(x);
-
-        bw.write(String.valueOf(x[total - cut]));
+        bw.write(String.valueOf(cnt));
         bw.flush();
         bw.close();
     }
